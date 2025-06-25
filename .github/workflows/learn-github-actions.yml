@@ -31,3 +31,7 @@ jobs:
           context: .
           push: false
           tags: ${{ env.TEST_TAG }}
+
+      - name: Print Output
+        id: output
+        run: echo "${{ env.INPUT_WHO_TO_GREET }}"
