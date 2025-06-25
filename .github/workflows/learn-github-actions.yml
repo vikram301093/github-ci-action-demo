@@ -16,13 +16,6 @@ jobs:
     name: Docker Tests
     runs-on: ubuntu-latest
 
-    # Run a local registry to push to
-    services:
-      registry:
-        image: registry:2
-        ports:
-          - 5001:5000
-
     env:
       TEST_TAG: localhost:5001/actions/hello-world-docker-action:latest
 
@@ -40,8 +33,8 @@ jobs:
 
       - name: Build the Container
         id: build
-        uses: docker/build@v6
+        uses: docker/build-push-action@v6
         with:
           context: .
-          push: true
+          push: false
           tags: ${{ env.TEST_TAG }}
