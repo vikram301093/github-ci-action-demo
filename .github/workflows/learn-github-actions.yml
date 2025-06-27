@@ -34,4 +34,4 @@ jobs:
 
       - name: Print Output
         id: output
-        run: echo "${{ env.INPUT_WHO_TO_GREET }}"
+        run: echo "${{ env.inputs.who-to-greet }}"
