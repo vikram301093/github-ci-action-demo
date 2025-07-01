@@ -18,6 +18,7 @@ jobs:
 
     env:
       TEST_TAG: localhost:5001/actions/hello-world-docker-action:latest
+      username: vikram
 
     steps:
       - name: Checkout
@@ -34,4 +35,4 @@ jobs:
 
       - name: Print Output
         id: output
-        run: echo "${{ inputs.who-to-greet.description }}"
+        run: echo "${{ env.username }}"
