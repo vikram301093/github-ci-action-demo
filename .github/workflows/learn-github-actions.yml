@@ -35,4 +35,6 @@ jobs:
 
       - name: Print Output
         id: output
-        run: echo "${{ env.username }}"
+        env:
+          INPUT_WHO_TO_GREET: Mona Lisa Octocat
+        run: echo "${{ env.INPUT_WHO_TO_GREET }}"
