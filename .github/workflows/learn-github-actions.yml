@@ -38,3 +38,11 @@ jobs:
         env:
           INPUT_WHO_TO_GREET: Mona Lisa Octocat
         run: echo "${{ env.INPUT_WHO_TO_GREET }}"
+
+  test-build:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Output
+        run: echo "Vikram Singh"
