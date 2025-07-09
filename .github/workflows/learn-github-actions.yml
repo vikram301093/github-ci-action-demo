@@ -41,6 +41,7 @@ jobs:
 
   test-build:
     name: Test
+    needs: [test-docker]
     runs-on: ubuntu-latest
 
     steps:
