@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Passing the values to container
-        uses: ./actions/wrap-action
+        uses: ./.github/actions/wrap-action
         with:
           container_file_path: Containerfile
           hadolint_config: test-hadolint-config.yaml
