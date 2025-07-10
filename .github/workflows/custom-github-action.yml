@@ -1,0 +1,30 @@
+name: Custom Github Action
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-oci-image-container-test:
+    name: build-oci-image-container-test
+    runs-on: ubuntu-latest
+
+    env:
+      TEST_TAG: localhost:5001/actions/hello-world-docker-action:latest
+      username: vikram
+
+    steps:
+      - name: docker login
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.docker_username }}
+          password: ${{ secrets.docker_password }}
+
+      - name: Passing the values to container
+        id: build
+        uses: docker://631043/hello-world-github-action-invkush:1.4.0
+        with:
+          container_file_path: Containerfile
+          hadolint_config: test-hadolint-config.yaml
+          acr: true
