@@ -16,6 +16,10 @@ jobs:
 
     steps:
 
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+
       - name: Passing the values to container
         uses: ./actions/wrap-action
         with:
