@@ -7,7 +7,7 @@ runs:
   steps:
     - uses: docker/login-action@v3
       with:
-        username: ${{ secrets.docker_username }}
-        password: ${{ secrets.docker_password }}
+        username: ${{ vars.docker_username }}
+        password: ${{ vars.docker_password }}
     - name: Run private-image action
       uses: ./private-docker-action
