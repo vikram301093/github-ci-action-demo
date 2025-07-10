@@ -10,4 +10,4 @@ runs:
         username: 631043
         password: dckr_pat_zOps2iZ5oC0cIwAQTrmWV6w7WF8
     - name: Run private-image action
-      uses: ./private-docker-action
+      uses: ./actions/private-docker-action
