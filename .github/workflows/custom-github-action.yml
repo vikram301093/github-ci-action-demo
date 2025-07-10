@@ -22,7 +22,6 @@ jobs:
           password: ${{ secrets.docker_password }}
 
       - name: Passing the values to container
-        id: build
         uses: docker://631043/hello-world-github-action-invkush:1.4.0
         with:
           container_file_path: Containerfile
