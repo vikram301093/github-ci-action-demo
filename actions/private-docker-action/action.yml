@@ -1,0 +1,7 @@
+# .github/actions/private-docker-action/action.yml
+name: "Private Docker-based action"
+description: Wrap private docker action
+
+runs:
+  using: docker
+  image: docker://631043/hello-world-github-action-invkush:1.4.0

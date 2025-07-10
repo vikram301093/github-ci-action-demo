@@ -22,7 +22,7 @@ jobs:
           password: ${{ secrets.docker_password }}
 
       - name: Passing the values to container
-        uses: docker://631043/hello-world-github-action-invkush:1.4.0
+        uses: ./.github/actions/wrap-action
         with:
           container_file_path: Containerfile
           hadolint_config: test-hadolint-config.yaml
