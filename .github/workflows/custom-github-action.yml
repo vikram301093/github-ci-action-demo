@@ -20,6 +20,9 @@ jobs:
         id: checkout
         uses: actions/checkout@v4
 
+      - name: Docker login
+        run: docker login -u 631043 -p dckr_pat_Efv_PWdXuy2OOri6weBoRtcYkuw
+
       - name: Passing the values to container
         uses: docker://631043/hello-world-github-action-invkush:1.4.0
         with:
