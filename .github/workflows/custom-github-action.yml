@@ -20,12 +20,6 @@ jobs:
         id: checkout
         uses: actions/checkout@v4
 
-      - name: docker login
-        uses: docker/login-action@v3
-        with:
-          username: ${{ secrets.docker_username }}
-          password: ${{ secrets.docker_password }}
-
       - name: Passing the values to container
         uses: docker://631043/hello-world-github-action-invkush:1.4.0
         with:
